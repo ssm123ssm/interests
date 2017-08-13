@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.grid {
+    background: #DDD;
+}
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid-sizer,
+.grid-item {
+    width: 33.333%;
+    min-width: 250px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
+
+.pin {
+    position: relative;
+}
+
+.love {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.love2 {
+    position: absolute;
+    bottom: 15px;
+    left: 31px;
+    font-size: 20px;
+}
+
+.red {
+    color: rgba(255, 0, 0, 0.67);
+    transition: all 0.3s ease;
+}
+
+.red:hover {
+    font-size: 1.9vw;
+    cursor: pointer;
+}
+
+.trash {
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+.trash:hover {
+    font-size: 1.9vw;
+    cursor: pointer;
+}
+
+.preview {
+    display: none;
+    margin: auto;
+}
+
+.profile {
+    transition: all 0.3s ease;
+    position: relative;
+    /*bottom: 3.9vw;
+    left: 7vw;*/
+    display: inline-block;
+    width: 3vw;
+    height: 3vw;
+    min-width: 45px;
+    min-height: 45px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-size: contain;
+    margin-left: 15px;
+}
+
+.profile:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.mainImg {
+    transition: all 0.3s ease;
+}
+
+.description {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icons {
+    position: relative;
+    top: -59px;
+    left: 13px;
+}
+
+.profile_pic {
+    /*    border-radius: 50%;*/
+    border: 3px solid grey;
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.circular {
+    max-width: 150px;
+    min-width: 100px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.ppe-title {}
+
+.peep-h {
+    display: inline-block;
+    position: relative;
+    /*    top: -73px;*/
+    vertical-align: middle;
+    /* margin-left: 20px; */
+    font-size: 30px;
+}
+
+.footer {
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid grey;
+}

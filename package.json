@@ -1,0 +1,22 @@
+{
+  "name": "interestd",
+  "version": "1.0.0",
+  "description": "Alpha V",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "ssm123ssm",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "mongo": "^0.1.0",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "session": "^0.1.0"
+  }
+}

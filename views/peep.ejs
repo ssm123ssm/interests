@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interests</title>
+
+    <link rel="stylesheet" href="res/bootstrap.css">
+    <link rel="stylesheet" href="res/animate.css">
+    <link rel="stylesheet" href="res/main.css">
+    <link rel="stylesheet" href="res/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="res/jquery.js"></script>
+    <script src="res/tether.min.js"></script>
+    <script src="res/bootstrap.js"></script>
+    <script src="res/masonry.pkgd.min.js"></script>
+    <script src="res/imagesloaded.pkgd.min.js"></script>
+    <script src="res/jquery.cookie.js"></script>
+
+    <script src="res/angular.js"></script>
+    <script src="res/angular-route.js"></script>
+
+
+    <script src="res/main.js"></script>
+</head>
+
+<body>
+    <% if(user.name == '###'){ %>
+        <%-include sign_navbar %>
+            <% } else { %>
+                <%-include ok_navbar %>
+                    <% } %>
+
+                        <div class="container-fluid" id="container" ng-app='myApp' ng-controller='ctrl' ng-init='loadPeep(<%=id%>)'>
+
+                            <div class="peep-title mt-5 mb-4">
+                                <div class="row">
+                                    <div class="circular col-3"><img class="img-responsive img-thumbnial profile_pic" src={{profile_pic}}></div>
+                                    <div class="peep-h col-3">
+                                        Pins By {{name}}
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="grid mt-4">
+                                <div class="grid-sizer"></div>
+                                <div ng-repeat='item in peeps'>
+                                    <div class="grid-item pin" pin>
+                                        <div class="description">{{item.description}}</div>
+                                        <img class="mainImg img-thumbnail" src="{{item.url}}" ng-click="open(item.url)" fallback>
+                                        <div class="icons">
+                                            <div class="love" ng-click="love(item.id)" ng-mouseover="blur()" ng-mouseleave="bright()    "><i class="fa fa-heart red"></i> ({{item.love}})</div>
+                                            <div class="profile" ng-click="peep()" ng-mouseover="blur()" ng-mouseleave="bright()"></div>
+                                        </div>
+                                        <!--<div class="trash"><i class="fa fa-trash"></i></div>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <%-include footer%>
+
+</body>
+
+</html>
